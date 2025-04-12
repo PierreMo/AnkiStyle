@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Anki template development</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><u>Chapitre de cours avec un nom qui peut être très long et potentiellement complexe</u></header>
+
+    <div id="content">
+      <div class='face' id='recto'>
+        Ici il doit y avoir une question sur ton cours
+      </div>
+      <div class='face' id='verso'>
+        Ici il doit y avoir la réponse à la question
+      </div>
+    </div>
+
+<!--
+<script>
+  const leVerso = document.createElement("div");
+  leVerso.className="face";
+  leVerso.setAttribute("id", "verso");
+
+  const node = document.createTextNode("{{Verso}}");
+  
+  leVerso.appendChild(node);
+
+  const element = document.getElementById("content");
+  element.appendChild(leVerso);
+</script>
+-->
+</body>
+</html>
