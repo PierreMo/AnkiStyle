@@ -1,5 +1,5 @@
 body {
-	font-family: Menlo, baskerville, adoble caslon pro, sans;
+	font-family: Menlo, baskerville, adoble caslon pro, sans, serif;
 	font-size: 18px;
 	text-align: center;
 	background-color: #F0F0F3;
@@ -7,20 +7,29 @@ body {
 	line-height: 1.6em;
 }
 
-header{
-	font-family: "Consolas";
+header {
+	min-width: 100px;
+	max-width: 400px; /* or fit-content if you want auto scaling */
+
+
+	font-family: "Consolas", serif;
 	font-size: 15px;
+	line-height: 1.5em;
+	height: 3em;
 	color: #D7DEE9;
-	padding: 0px 0px;
-	max-width: min-content;
-	height: 60px;
-	margin: 0 auto;
-	margin-bottom: 50px;
+
+	padding: 0;
+	margin: 0 auto 50px;
 	border-radius: 9px;
 	background: #F0F0F3;
-	box-shadow:  -10px 10px 30px 0 #FFFFFF,	
-             10px 10px 10px 0 #609ed0;
+	box-shadow:
+			-10px 10px 30px 0 #FFFFFF,
+			10px 10px 10px 0 #609ed0;
+
+	text-overflow: ellipsis;
+	word-break: break-word; /* Wrap long words */
 }
+
 
 
 #content{
