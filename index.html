@@ -4,13 +4,30 @@
   <meta charset="utf-8">
   <title>Anki template development</title>
   <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tags = ["b", "i", "u", "a"];
+            tags.forEach(tag => {
+                document.querySelectorAll(tag).forEach(el => {
+                    // Insert space before if not already there
+                    if (!el.previousSibling || el.previousSibling.nodeType === 3 && !el.previousSibling.textContent.endsWith('\u00A0')) {
+                        el.insertAdjacentText("beforebegin", '\u00A0');
+                    }
+                    // Insert space after if not already there
+                    if (!el.nextSibling || el.nextSibling.nodeType === 3 && !el.nextSibling.textContent.startsWith('\u00A0')) {
+                        el.insertAdjacentText("afterend", '\u00A0');
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header><u>Chapitre de cours avec un nom qui peut être très long et potentiellement complexe</u></header>
 
-    <div id="content">
+    <div id="theContent">
       <div class='face' id='recto'>
-          Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b>&nbsp;des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a>
+          Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a>
       </div>
       <div class='face' id='verso'>
         Ici il doit y avoir la réponse à la question

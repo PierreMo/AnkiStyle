@@ -9,8 +9,7 @@ body {
 
 header {
 	min-width: 100px;
-	max-width: 400px; /* or fit-content if you want auto scaling */
-
+	max-width: 400px;
 
 	font-family: "Consolas", serif;
 	font-size: 15px;
@@ -32,7 +31,7 @@ header {
 
 
 
-#content{
+#theContent{
 	display: flex;
 	height: 100%;
 	justify-content: center;
@@ -42,7 +41,7 @@ header {
 .face{
 	height: 500px;
 	width: 350px;
-	padding: 0px 0px;
+	padding: 0 0;
 	margin: 0 auto;
 	border-radius: 9px;
 	background: #F0F0F3;
@@ -57,12 +56,12 @@ header {
 
 #recto{
 	animation-iteration-count: 1;
-	animation: splittingCardLeft 1.25s;
+	animation: splittingCardLeft 1.1s;
 	z-index: 1;
 }
 #verso{
 	animation-iteration-count: 1;
-	animation: splittingCardRight 1.25s;
+	animation: splittingCardRight 1.1s;
 }
 
 @keyframes splittingCardLeft{
@@ -93,9 +92,9 @@ i  { color: IndianRed; } /* ITALICS STYLE */
 a { color: LightGray !important; text-decoration: none; font-size: 10px; font-style: normal; } /* LINK STYLE */
 
 
-
 /* IMAGE STYLE */
-img { display: block; max-width: 100%; max-height: none; margin-left: auto; margin: 10px auto 10px auto;}
+img { display: block; max-width: 100%; max-height: none;
+	margin: 10px auto 10px auto;}
 tr {font-size: 12px; }
 
 
