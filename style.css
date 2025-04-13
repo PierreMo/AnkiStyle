@@ -1,6 +1,6 @@
 html, body {
-	font-family: Menlo, baskerville, adoble caslon pro, sans, serif;
-	font-size: 18px;
+	font-family: Comic Sans MS, Menlo, baskerville, adoble caslon pro, sans, serif;
+	font-size: 1.15em;
 	text-align: center;
 	background-color: #F0F0F3;
 	color: #576574;
@@ -36,12 +36,11 @@ header {
 	display: flex;
 	height: 100%;
 	justify-content: center;
-	background-color: black;
 }
 
 .face{
 	height: 80%;
-	width: 350px;
+	aspect-ratio: 10/16;
 	padding: 0 0;
 	margin: 0 auto;
 	border-radius: 9px;
