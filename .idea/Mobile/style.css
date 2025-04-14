@@ -49,6 +49,7 @@ header {
 #card {
 	height: 75%;
 	aspect-ratio: 10/16;
+	max-width: 90%;
 	position: relative;
 	transform-style: preserve-3d; /* Ensures child elements are rendered in 3D space */
 	transition: transform 0.4s; /* Smooth transition for the flip */
