@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" class="win">
 <head>
     <meta charset="utf-8">
     <title>Anki template development</title>
@@ -8,7 +8,7 @@
 </head>
 
 <body class="win">
-<header><u>Chapitre de cours avec un nom qui peut être très long et potentiellement complexe</u></header>
+<header><p><u>Chapitre de cours avec un nom :</u><b> qui peut être très long et potentiellement complexe</b></p></header>
 
 <div id="theContent">
     <div class='face' id='recto'>
@@ -20,6 +20,10 @@
         <div class="faceContent">
             Ici il doit y avoir la réponse à la question
         </div>
+    </div>
+    <div id = 'bckgCards'>
+        <div class='face' id='bckgFace1'> </div>
+        <div class='face' id='bckgFace2'><p>Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a></p></div>
     </div>
 </div>
 
@@ -51,17 +55,23 @@
             });
         });
 
+        var theContent = document.getElementById('theContent');
+        var cardContent = [document.getElementById('recto'), document.getElementById('verso'), document.getElementById('bckgCards')]
         if (document.querySelector(`.${'mobile'}`) !== null) {
             document.body.addEventListener("click", revealAnswer);
-            var theContent = document.getElementById('theContent');
-            var recto = document.getElementById('recto');
-            var verso = document.getElementById('verso');
             var newCard = document.createElement('div');
             newCard.id = 'card';
-            newCard.appendChild(recto);
-            newCard.appendChild(verso);
+            for(let i = 0; i<2; i++) {
+                newCard.appendChild(cardContent[i]);
+            }
             theContent.innerHTML = '';
             theContent.appendChild(newCard);
+            theContent.appendChild(cardContent[2]);
+        }else{
+            theContent.innerHTML = '';
+            for(let i = 0; i<2; i++) {
+                theContent.appendChild(cardContent[i]);
+            }
         }
     });
 </script>
