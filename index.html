@@ -4,41 +4,10 @@
     <meta charset="utf-8">
     <title>Anki template development</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function isMobileDevice() {
-            return /Mobi|Android/i.test(navigator.userAgent);
-        }
-        document.addEventListener("DOMContentLoaded", function() {
-            const tags = ["b", "i", "u", "a"];
-            tags.forEach(tag => {
-                document.querySelectorAll(tag).forEach(el => {
-                    // Insert space before if not already there
-                    if (!el.previousSibling || el.previousSibling.nodeType === 3 && !el.previousSibling.textContent.endsWith('\u00A0')) {
-                        el.insertAdjacentText("beforebegin", '\u00A0');
-                    }
-                    // Insert space after if not already there
-                    if (!el.nextSibling || el.nextSibling.nodeType === 3 && !el.nextSibling.textContent.startsWith('\u00A0')) {
-                        el.insertAdjacentText("afterend", '\u00A0');
-                    }
-                });
-            });
-            if (isMobileDevice()) {
-                document.body.addEventListener("click", revealAnswer);
-                var theContent = document.getElementById('theContent');
-                var recto = document.getElementById('recto');
-                var verso = document.getElementById('verso');
-                var newCard = document.createElement('div');
-                newCard.id = 'card';
-                newCard.appendChild(recto);
-                newCard.appendChild(verso);
-                theContent.innerHTML = '';
-                theContent.appendChild(newCard);
-            }
-        });
-    </script>
+
 </head>
 
-<body>
+<body class="win">
 <header><u>Chapitre de cours avec un nom qui peut être très long et potentiellement complexe</u></header>
 
 <div id="theContent">
@@ -63,6 +32,38 @@
             card.style.transform = 'rotateY(180deg)';
         }
     }
+    function isMobileDevice() {
+        return /Mobi|Android/i.test(navigator.userAgent);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const tags = ["b", "i", "u", "a"];
+        tags.forEach(tag => {
+            document.querySelectorAll(tag).forEach(el => {
+                // Insert space before if not already there
+                if (!el.previousSibling || el.previousSibling.nodeType === 3 && !el.previousSibling.textContent.endsWith('\u00A0')) {
+                    el.insertAdjacentText("beforebegin", '\u00A0');
+                }
+                // Insert space after if not already there
+                if (!el.nextSibling || el.nextSibling.nodeType === 3 && !el.nextSibling.textContent.startsWith('\u00A0')) {
+                    el.insertAdjacentText("afterend", '\u00A0');
+                }
+            });
+        });
+
+        if (document.querySelector(`.${'mobile'}`) !== null) {
+            document.body.addEventListener("click", revealAnswer);
+            var theContent = document.getElementById('theContent');
+            var recto = document.getElementById('recto');
+            var verso = document.getElementById('verso');
+            var newCard = document.createElement('div');
+            newCard.id = 'card';
+            newCard.appendChild(recto);
+            newCard.appendChild(verso);
+            theContent.innerHTML = '';
+            theContent.appendChild(newCard);
+        }
+    });
 </script>
 
 </body>

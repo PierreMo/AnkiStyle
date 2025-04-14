@@ -44,7 +44,7 @@ header {
     justify-content: center;
     align-items: center;
 }
-#card { /* for mobile devices */
+.mobile #card { /* for mobile devices */
     height: 75%;
     aspect-ratio: 10/16;
     max-width: 90%;
@@ -59,8 +59,7 @@ header {
     border-radius: 9px;
     background: #F0F0F3;
     align-items: center;
-    box-shadow: -10px 10px 30px 0 #FFFFFF,
-    10px 10px 10px 0 #AEAEC0;
+    box-shadow: -10px 10px 30px 0 #FFFFFF, 10px 10px 10px 0 #AEAEC0;
     text-align: center;
     display: flex;
     justify-content: center;
