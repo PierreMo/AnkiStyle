@@ -94,12 +94,3 @@ a { color: LightGray !important; text-decoration: none; font-size: 10px; font-st
 img { display: block; max-width: 100%; max-height: none;
 	margin: 10px auto 10px auto;}
 tr {font-size: 12px; }
-
-
-/* Windows */
-.win .example, .mac .example, .linux:not(.android) .example {
-
-}
-/* both Android and iOS */
-.mobile .example {
-}
