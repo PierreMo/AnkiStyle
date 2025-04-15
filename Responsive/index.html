@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" class="mobile">
+<html lang="fr" class="win">
 <head>
     <meta charset="utf-8">
     <title>Anki template development</title>
@@ -7,10 +7,14 @@
 
 </head>
 
-<body class="mobile">
+<body class="win">
+
+
 <header><p><u>Chapitre de cours avec un nom :</u><b> qui peut être très long et potentiellement complexe</b></p></header>
 
-<div id="theContent" class="inRecto">
+<input type="checkbox" id="flip-control">
+
+<div id="theContent" class="inVerso">
     <div id="flippingCard">
         <div class='face' id='recto'>
             <div class="faceContent">
@@ -28,34 +32,6 @@
         <div class='face' id='bckgFace2'><p>Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a></p></div>
     </div>
 </div>
-
-<script>
-    console.log("Hello World");
-    function revealAnswer() {
-        var card = document.getElementById('flippingCard');
-        if (card.style.transform === 'rotateY(180deg)') {
-            card.style.transform = 'rotateY(0deg)';
-        } else {
-            card.style.transform = 'rotateY(180deg)';
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", function() {
-        const tags = ["b", "i", "u", "a"];
-        tags.forEach(tag => {
-            document.querySelectorAll(tag).forEach(el => {
-                // Insert space before if not already there
-                if (!el.previousSibling || el.previousSibling.nodeType === 3 && !el.previousSibling.textContent.endsWith('\u00A0')) {
-                    el.insertAdjacentText("beforebegin", '\u00A0');
-                }
-                // Insert space after if not already there
-                if (!el.nextSibling || el.nextSibling.nodeType === 3 && !el.nextSibling.textContent.startsWith('\u00A0')) {
-                    el.insertAdjacentText("afterend", '\u00A0');
-                }
-            });
-        });
-    });
-</script>
 
 </body>
 </html>

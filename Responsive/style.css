@@ -23,6 +23,33 @@
     overflow: hidden;
 }
 
+.mobile #flip-control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+
+    -webkit-appearance: none; /* Remove default appearance on WebKit browsers */
+    -moz-appearance: none;    /* Remove default appearance on Firefox */
+    appearance: none;         /* Remove default appearance on other browsers */
+    background: transparent;  /* Make it invisible */
+    border: none;
+}
+.mobile #flip-control:checked + #theContent #flippingCard {
+    transform: rotateY(180deg);
+}
+.mobile #flip-control:focus {
+    outline: none;
+}
+
+.win #flip-control, .mac #flip-control, .linux:not(.android) #flip-control {
+    display: none;
+}
+
 .win header, .mac header, .linux:not(.android) header {
     min-width: 100px;
     width: 40%;
@@ -74,9 +101,8 @@
     border-image: initial;
 }
 .win #theContent, .mac #theContent, .linux:not(.android) #theContent {
-    display: flex;
-    height: 80%;
-    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 .mobile #theContent{
     perspective: 2000px;
@@ -100,8 +126,9 @@
     z-index: 3;
 }
 .win #flippingCard, .mac #flippingCard, .linux:not(.android) #flippingCard{
-    height: 100%;
-    width: 100%;
+    display: flex;
+    height: 80%;
+    justify-content: center;
 }
 
 
@@ -178,12 +205,12 @@
 #bckgFace2 p{
     filter: blur(10px);
 }
-.win #recto, .mac #recto, .linux:not(.android) #recto {
+.win .inVerso #recto, .mac .inVerso #recto, .linux:not(.android) .inVerso #recto {
     animation-iteration-count: 1;
     animation: splittingCardLeft 1.1s;
     z-index: 1;
 }
-.win #verso, .mac #verso, .linux:not(.android) #verso {
+.win .inVerso #verso, .mac .inVerso #verso, .linux:not(.android) .inVerso #verso {
     animation-iteration-count: 1;
     animation: splittingCardRight 1.1s;
 }
