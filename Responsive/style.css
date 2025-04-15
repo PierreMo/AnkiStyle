@@ -20,26 +20,33 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    /overflow: hidden;
+    overflow: hidden;
 }
 
 .win header, .mac header, .linux:not(.android) header {
     min-width: 100px;
-    max-width: 400px;
+    width: 40%;
     font-family: "Consolas", serif;
-    font-size: 15px;
+    font-size: 80%;
     line-height: 1.5em;
-    height: 3em;
+    height: 4em;
+    display: flex;
+    align-items: center;
     color: #D7DEE9;
     padding: 0;
-    margin: 10% auto 0 auto;
-    border-radius: 9px;
-    background: #F0F0F3;
+    margin: 1% auto 3% auto;
+    background: white;
     box-shadow:
             -10px 10px 30px 0 #FFFFFF,
             10px 10px 10px 0 #609ed0;
     text-overflow: ellipsis;
     word-break: break-word; /* Wrap long words */
+
+    border-radius: 9px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #e1ebef #cadbea #cadbea;
+    border-image: initial;
 }
 .mobile header {
     min-width: 100px;
@@ -62,12 +69,13 @@
     border-radius: 20px;
     border-width: 3px;
     border-style: solid;
-    border-color: rgb(227, 226, 224) rgb(214, 214, 211) rgb(214, 214, 211);
+    /*border-color: rgb(227, 226, 224) rgb(214, 214, 211) rgb(214, 214, 211);*/
+    border-color: #e1ebef #cadbea #cadbea;
     border-image: initial;
 }
 .win #theContent, .mac #theContent, .linux:not(.android) #theContent {
     display: flex;
-    height: 100%;
+    height: 80%;
     justify-content: center;
 }
 .mobile #theContent{
@@ -78,8 +86,7 @@
     justify-content: flex-start;
     align-items: center;
     margin-top: 3%;
-    padding-top: 15%;
-    padding: 5%;
+    padding: 15% 5% 5%;
 
 }
 .mobile #card { /* for mobile devices */
@@ -99,18 +106,26 @@
 
 
 .win .face, .mac .face, .linux:not(.android) .face {
+    height: 95%;
     aspect-ratio: 10/16;
-    border-radius: 9px;
-    background: #F0F0F3;
-    align-items: center;
-    box-shadow: -10px 10px 30px 0 #FFFFFF, 10px 10px 10px 0 #AEAEC0;
-    text-align: center;
+    padding: .4%;
+    margin: 0 auto;
+
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     flex-wrap: wrap;
-    height: 80%;
-    padding: 0 0;
-    margin: 0 auto;
+
+    background: white;
+    border-radius: 17px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(227, 226, 224) rgb(214, 214, 211) rgb(214, 214, 211);
+    border-image: initial;
+    box-shadow: 0px 0px 30px 2px rgba(145,156,247,0.34);
+    -webkit-box-shadow: 0px 0px 30px 2px rgba(145,156,247,0.34);
+    -moz-box-shadow: 0px 0px 30px 2px rgba(145,156,247,0.34);
 }
 
 .mobile .face{
@@ -124,8 +139,8 @@
     height: 100%;
     padding: 15px;
     margin: 0;
-    position: absolute;
 
+    position: absolute;
     backface-visibility: hidden;
 
     background: white;
