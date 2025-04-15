@@ -10,15 +10,17 @@
 <body class="mobile">
 <header><p><u>Chapitre de cours avec un nom :</u><b> qui peut être très long et potentiellement complexe</b></p></header>
 
-<div id="theContent">
-    <div class='face' id='recto'>
-        <div class="faceContent">
-            Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a>
+<div id="theContent" class="inRecto">
+    <div id="flippingCard">
+        <div class='face' id='recto'>
+            <div class="faceContent">
+                Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a>
+            </div>
         </div>
-    </div>
-    <div class='face' id='verso'>
-        <div class="faceContent">
-            Ici il doit y avoir la réponse à la question
+        <div class='face' id='verso'>
+            <div class="faceContent">
+                Ici il doit y avoir la réponse à la question
+            </div>
         </div>
     </div>
     <div id = 'bckgCards'>
@@ -29,15 +31,12 @@
 
 <script>
     function revealAnswer() {
-        var card = document.getElementById('card');
+        var card = document.getElementById('flippingCard');
         if (card.style.transform === 'rotateY(180deg)') {
             card.style.transform = 'rotateY(0deg)';
         } else {
             card.style.transform = 'rotateY(180deg)';
         }
-    }
-    function isMobileDevice() {
-        return /Mobi|Android/i.test(navigator.userAgent);
     }
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -60,7 +59,7 @@
         if (document.querySelector(`.${'mobile'}`) !== null) {
             document.body.addEventListener("click", revealAnswer);
             var newCard = document.createElement('div');
-            newCard.id = 'card';
+            newCard.id = 'flippingCard';
             for(let i = 0; i<2; i++) {
                 newCard.appendChild(cardContent[i]);
             }
@@ -69,8 +68,9 @@
             theContent.appendChild(cardContent[2]);
         }else{
             theContent.innerHTML = '';
-            for(let i = 0; i<2; i++) {
-                theContent.appendChild(cardContent[i]);
+            theContent.appendChild(cardContent[0]); // adding recto
+            if (document.querySelector(`.${'inRecto'}`) === null){
+                theContent.appendChild(cardContent[1]); //adding verso if not inRecto
             }
         }
     });

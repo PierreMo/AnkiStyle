@@ -89,7 +89,7 @@
     padding: 15% 5% 5%;
 
 }
-.mobile #card { /* for mobile devices */
+.mobile #flippingCard { /* for mobile devices */
     height: 100%;
     width: 90%;
     position: relative;
@@ -98,11 +98,7 @@
     transform-origin: center;
     z-index: 3;
 }
-.mobile #bckgCards { /* for mobile devices */
-    height: 100%;
-    width: 90%;
-    position: absolute;
-}
+
 
 
 .win .face, .mac .face, .linux:not(.android) .face {
