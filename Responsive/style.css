@@ -1,4 +1,4 @@
-.mobile {
+.mobile, .mobile.card{
     font-family: Comic Sans MS, Menlo, baskerville, adoble caslon pro, sans, serif;
     font-size: 200%;
     text-align: center;
@@ -10,7 +10,7 @@
     padding: 0;
     overflow: hidden;
 }
-.win, .mac, .linux:not(.android) {
+.win, .mac, .linux:not(.android), .win .card, .mac .card, .linux:not(.android) .card {
     font-family: Comic Sans MS, Menlo, baskerville, adoble caslon pro, sans, serif;
     font-size: 1.15em;
     text-align: center;
