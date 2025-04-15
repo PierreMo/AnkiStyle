@@ -54,26 +54,6 @@
                 }
             });
         });
-
-        var theContent = document.getElementById('theContent');
-        var cardContent = [document.getElementById('recto'), document.getElementById('verso'), document.getElementById('bckgCards')]
-        if (document.querySelector(`.${'mobile'}`) !== null) {
-            document.body.addEventListener("click", revealAnswer);
-            var newCard = document.createElement('div');
-            newCard.id = 'flippingCard';
-            for(let i = 0; i<2; i++) {
-                newCard.appendChild(cardContent[i]);
-            }
-            theContent.innerHTML = '';
-            theContent.appendChild(newCard);
-            theContent.appendChild(cardContent[2]);
-        }else{
-            theContent.innerHTML = '';
-            theContent.appendChild(cardContent[0]); // adding recto
-            if (document.querySelector(`.${'inRecto'}`) === null){
-                theContent.appendChild(cardContent[1]); //adding verso if not inRecto
-            }
-        }
     });
 </script>
 
