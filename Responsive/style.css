@@ -89,6 +89,7 @@
     padding: 15% 5% 5%;
 
 }
+
 .mobile #flippingCard { /* for mobile devices */
     height: 100%;
     width: 90%;
@@ -98,7 +99,10 @@
     transform-origin: center;
     z-index: 3;
 }
-
+.win #flippingCard, .mac #flippingCard, .linux:not(.android) #flippingCard{
+    height: 100%;
+    width: 100%;
+}
 
 
 .win .face, .mac .face, .linux:not(.android) .face {
@@ -155,6 +159,14 @@
     transform: rotateY(180deg);
 }
 
+.mobile #bckgCards { /* for mobile devices */
+    height: 100%;
+    width: 90%;
+    position: absolute;
+}
+.win #bckgCards, .mac #bckgCards, .linux:not(.android) #bckgCards {
+    display: none;
+}
 #bckgFace1{
     transform: rotate(4deg);
     z-index: 1;
@@ -175,6 +187,11 @@
     animation-iteration-count: 1;
     animation: splittingCardRight 1.1s;
 }
+
+.win .inRecto #verso, .mac .inRecto #verso, .linux:not(.android) .inRecto #verso {
+    display: none;
+}
+
 @keyframes splittingCardLeft{
     from{
         transform: translateX(95%);
