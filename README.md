@@ -1,14 +1,14 @@
 # Anki Style Template
 
-Tested on/Testé sur : Anki Desktop, AnkiDroid, AnkiWeb, Anki IOS
+Tested on/Testé sur : `Anki Desktop`, `AnkiDroid`, `AnkiWeb`, `Anki IOS`
 
-On Desktop :
+### On Desktop :
 <div>
   <img src="dev/images/DesktopLight.png" alt="Anki Style Template on desktop with light mode" width="49%" />
   <img src="dev/images/DesktopNight.png" alt="Anki Style Template on desktop with night mode" width="49%" />
 </div>
 
-On Mobile :
+### On Mobile :
 <div style="display: flex; justify-content: space-evenly; margin-bottom: 20px;">
   <img src="dev/images/MobileLight.png" alt="Anki Style Template on mobile with light mode" width="20%" />
   <img src="dev/images/MobileNight.png" alt="Anki Style Template on mobile with night mode" width="20%" />
@@ -16,7 +16,7 @@ On Mobile :
 
 
 
-## English
+## English (Version Française disponible [ici](#version-fr))
 
 ### Features
 - **Dark and Light Mode**: Automatically adapts to your Anki settings.
@@ -43,7 +43,7 @@ This project is licensed under the Creative Commons Attribution-NonCommercial 4.
 
 ---
 
-## Français
+## <a name="version-fr"></a> Français
 
 ### Fonctionnalités
 - **Mode Sombre et Clair**: S'adapte automatiquement aux paramètres d'Anki.
