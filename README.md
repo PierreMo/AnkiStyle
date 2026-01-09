@@ -16,7 +16,8 @@ Tested on/Testé sur : `Anki Desktop`, `AnkiDroid`, `AnkiWeb`, `Anki IOS`
 
 
 
-## English (Version Française disponible [ici](#version-fr))
+## English
+#### (Version Française disponible [ici](#version-fr))
 
 ### Features
 - **Dark and Light Mode**: Automatically adapts to your Anki settings.
