@@ -1,28 +1,48 @@
-.mobile, .mobile.card{
+/*
+À METTRE DANS "Styles" pour les cartes "Texte à trous" :
+*/
+
+
+/* GENERAL STYLES (commmon, mobile, desktop)*/
+.card, .mobile, .win, .mac, .linux{
     font-family: Comic Sans MS, Menlo, baskerville, adoble caslon pro, sans, serif;
-    font-size: 200%;
-    text-align: center;
-    background-color: rgb(243, 249, 255);
-    color: #576574;
-    line-height: 1.45em;
     height: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    text-align: center;
+    background-color: rgb(243, 249, 255);
+    color: #576574;
+}
+.mobile, .mobile.card{
+    font-size: 200%;
+    line-height: 1.45em;
 }
 .win, .mac, .linux:not(.android), .win .card, .mac .card, .linux:not(.android) .card {
-    font-family: Comic Sans MS, Menlo, baskerville, adoble caslon pro, sans, serif;
     font-size: 1.15em;
-    text-align: center;
-    background-color: rgb(243, 249, 255);
-    color: #576574;
     line-height: 1.6em;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
 }
 
+.card.nightMode{
+    --transition: 0.2s ease-in-out;
+    /* bg-colors */
+    --bg-dark: oklch(0.1 0 264);
+    --bg: oklch(0.2 0 264);
+    --bg-light: oklch(0.3 0 264);
+    /* text-colors */
+    --text: oklch(0.96 0 264);
+    --text-muted: oklch(0.76 0 264);
+    /* shadows */
+    --shadow-l: inset 0 1px 2px #ffffff70, /* top highlight */ 0 4px 6px #00000030,
+        /* dark shadow */ 0 6px 10px #00000015; /* soft shadow */
+
+    background: var(--bg);
+    color: var(--text);
+}
+
+
+
+/* FLIP CONTROL (mobile, desktop)*/
 .mobile #flip-control {
     position: absolute;
     top: 0;
@@ -32,10 +52,7 @@
     opacity: 0;
     cursor: pointer;
     z-index: 1;
-
-    -webkit-appearance: none; /* Remove default appearance on WebKit browsers */
-    -moz-appearance: none;    /* Remove default appearance on Firefox */
-    appearance: none;         /* Remove default appearance on other browsers */
+    -webkit-appearance: none;-moz-appearance: none;appearance: none;         /* Remove default appearance */
     background: transparent;  /* Make it invisible */
     border: none;
 }
@@ -45,65 +62,58 @@
 .mobile #flip-control:focus {
     outline: none;
 }
-
 .win #flip-control, .mac #flip-control, .linux:not(.android) #flip-control {
     display: none;
 }
 
-.win header, .mac header, .linux:not(.android) header {
+/* HEADER STYLES (commmon, mobile, desktop)*/
+header{
     min-width: 100px;
-    width: 40%;
     font-family: "Consolas", serif;
+    display: flex;
+
+    color: #D7DEE9;
+    padding: 0;
+    box-shadow:
+            -10px 10px 30px 0 #FFFFFF,
+            10px 10px 10px 0 #609ed0;
+    text-overflow: ellipsis;
+    word-break: break-word; /* Wrap long words */
+    background: white;
+
+    border-style: solid;
+    border-color: #e1ebef #cadbea #cadbea;
+    border-image: initial;
+}
+.nightMode header{
+    background: var(--bg-light);
+    box-shadow: var(--shadow-l);
+    border: none;
+    border-radius: 1rem;
+}
+
+.win header, .mac header, .linux:not(.android) header {
+    width: 40%;
     font-size: 80%;
     line-height: 1.5em;
     height: 4em;
-    display: flex;
     align-items: center;
-    color: #D7DEE9;
-    padding: 0;
+    justify-content: center;
     margin: 1% auto 3% auto;
-    background: white;
-    box-shadow:
-            -10px 10px 30px 0 #FFFFFF,
-            10px 10px 10px 0 #609ed0;
-    text-overflow: ellipsis;
-    word-break: break-word; /* Wrap long words */
-
     border-radius: 9px;
     border-width: 2px;
-    border-style: solid;
-    border-color: #e1ebef #cadbea #cadbea;
-    border-image: initial;
 }
 .mobile header {
-    min-width: 100px;
     width: 75%;
-    font-family: "Consolas", serif;
     font-size: 50%;
     line-height: 1.2em;
     height: 4.3em;
-    display: flex;
-    color: #D7DEE9;
-    padding: 0;
     margin: 10% auto 0 auto;
-    box-shadow:
-            -10px 10px 30px 0 #FFFFFF,
-            10px 10px 10px 0 #609ed0;
-    text-overflow: ellipsis;
-    word-break: break-word; /* Wrap long words */
-
-    background: white;
     border-radius: 20px;
     border-width: 3px;
-    border-style: solid;
-    /*border-color: rgb(227, 226, 224) rgb(214, 214, 211) rgb(214, 214, 211);*/
-    border-color: #e1ebef #cadbea #cadbea;
-    border-image: initial;
 }
-.win #theContent, .mac #theContent, .linux:not(.android) #theContent {
-    height: 100%;
-    width: 100%;
-}
+
+/* CARDS CONTAINER named theContent (mobile, desktop)*/
 .mobile #theContent{
     perspective: 2000px;
     display: flex;
@@ -111,11 +121,17 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 3%;
-    padding: 15% 5% 5%;
+    margin-top: 0;
+    padding: 12% 4% 5%;
 
 }
+.win #theContent, .mac #theContent, .linux:not(.android) #theContent {
+    height: 100%;
+    width: 100%;
+}
 
+
+/* FLIPPING CARDS PROPERTIES (mobile)*/
 .mobile #flippingCard { /* for mobile devices */
     height: 100%;
     width: 90%;
@@ -131,12 +147,9 @@
     justify-content: center;
 }
 
-
-.win .face, .mac .face, .linux:not(.android) .face {
-    height: 95%;
-    aspect-ratio: 10/16;
-    padding: 0.4%;
-    margin: 0 auto;
+/* FACE STYLES i.e. cards style (common, mobile, desktop)*/
+.face{
+    background: white;
 
     display: flex;
     justify-content: center;
@@ -144,9 +157,6 @@
     text-align: center;
     flex-wrap: wrap;
 
-    background: white;
-    border-radius: 17px;
-    border-width: 3px;
     border-style: solid;
     border-color: rgb(227, 226, 224) rgb(214, 214, 211) rgb(214, 214, 211);
     border-image: initial;
@@ -154,38 +164,45 @@
     -webkit-box-shadow: 0px 0px 30px 2px rgba(145,156,247,0.34);
     -moz-box-shadow: 0px 0px 30px 2px rgba(145,156,247,0.34);
 }
+.nightMode .face{
+    background: var(--bg-light);
+    box-shadow: var(--shadow-l);
+    border: none;
+    border-radius: 1rem;
+}
+.win .face, .mac .face, .linux:not(.android) .face {
+    height: 575px;
+    aspect-ratio: 10/16;
+    padding: 0.4%;
+    margin: 0 auto;
 
+    border-radius: 17px;
+    border-width: 3px;
+}
 .mobile .face{
-    align-items: center;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 450px;
     padding: 15px;
     margin: 0;
 
     position: absolute;
     backface-visibility: hidden;
 
-    background: white;
     border-radius: 40px;
     border-width: 3px;
-    border-style: solid;
-    border-color: rgb(227, 226, 224) rgb(214, 214, 211) rgb(214, 214, 211);
-    border-image: initial;
-    box-shadow: 0px 0px 30px 2px rgba(145,156,247,0.34);
-    -webkit-box-shadow: 0px 0px 30px 2px rgba(145,156,247,0.34);
-    -moz-box-shadow: 0px 0px 30px 2px rgba(145,156,247,0.34);
+}
+
+
+/* ANIMATIONS LOGIC (mobile, desktop)*/
+.mobile .inVerso #flippingCard{
+    transform: rotateY(180deg);
 }
 .mobile #recto{
 }
 .mobile #verso{
     transform: rotateY(180deg);
 }
-
 .mobile #bckgCards { /* for mobile devices */
     height: 100%;
     width: 90%;
@@ -214,7 +231,6 @@
     animation-iteration-count: 1;
     animation: splittingCardRight 1.1s;
 }
-
 .win .inRecto #verso, .mac .inRecto #verso, .linux:not(.android) .inRecto #verso {
     display: none;
 }
@@ -238,6 +254,10 @@
 }
 
 
+#answer{
+    display: none;
+}
+
 
 /* STYLE FOR CLOZE DELETIONS */
 .cloze, .cloze b, .cloze u, .cloze i { font-weight: bold; color: MediumSeaGreen !important;}
@@ -247,8 +267,17 @@ u { text-decoration: none; color: #5EB3B3;} /* UNDERLINE STYLE */
 i  { color: IndianRed; } /* ITALICS STYLE */
 a { color: LightGray !important; text-decoration: none; font-size: 10px; font-style: normal; } /* LINK STYLE */
 
+/* COLORS FOR NIGHT MODE */
+.nightMode .cloze, .nightMode .cloze b, .nightMode .cloze u, .nightMode .cloze i { font-weight: bold; color: #08ff76 !important;}
+.nightMode b { color: #f36ef3 !important; } /* BOLD STYLE */
+.nightMode u { text-decoration: none; color: #54ffb9;} /* UNDERLINE STYLE */
+.nightMode i  { color: #ff2d2d; } /* ITALICS STYLE */
+.nightMode a { color: LightGray !important; text-decoration: none; font-size: 10px; font-style: normal; } /* LINK STYLE */
 
 /* IMAGE STYLE */
 img { display: block; max-width: 100%; max-height: none;
     margin: 10px auto 10px auto;}
 tr {font-size: 12px; }
+
+
+

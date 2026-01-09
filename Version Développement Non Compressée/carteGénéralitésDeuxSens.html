@@ -1,0 +1,63 @@
+/*
+À METTRE DANS "Modèle du recto" pour les cartes "Généralités (deux sens)" (en dessous se trouve la partie verso) :
+*/
+
+<header><p>{{Chapitre}}</p></header>
+<input type="checkbox" id="flip-control">
+<div id="theContent" class="inRecto">
+    <div id="flippingCard">
+        <div class='face' id='recto'>
+            <div class="faceContent">
+                {{Recto}}
+            </div>
+        </div>
+        <hr id="answer"/>
+        <div class='face' id='verso'>
+            <div class="faceContent">
+                {{Verso}}
+            </div>
+        </div>
+    </div>
+    <!-- Decoration for mobile background -->
+    <div id = 'bckgCards'>
+        <div class='face' id='bckgFace1'> </div>
+        <div class='face' id='bckgFace2'>
+            <p>Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+/*
+À METTRE DANS "Modèle du verso" pour les cartes "Généralités (deux sens)" :
+*/
+
+<header><p>{{Chapitre}}</p></header>
+<input type="checkbox" id="flip-control">
+<div id="theContent" class="inVerso">
+    <div id="flippingCard">
+        <div class='face' id='recto'>
+            <div class="faceContent">
+                {{Recto}}
+            </div>
+        </div>
+        <hr id="answer"/>
+        <div class='face' id='verso'>
+            <div class="faceContent">
+                {{Verso}}
+            </div>
+        </div>
+    </div>
+    <!-- Decoration for mobile background -->
+    <div id = 'bckgCards'>
+        <div class='face' id='bckgFace1'> </div>
+        <div class='face' id='bckgFace2'>
+            <p>Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a></p>
+        </div>
+    </div>
+</div>
+
+
+
