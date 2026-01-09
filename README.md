@@ -1,14 +1,30 @@
 # Anki Style Template
 
+Tested on/Testé sur : Anki Desktop, AnkiDroid, AnkiWeb, Anki IOS
+
+On Desktop :
+<div>
+  <img src="images/DesktopLight.png" alt="Anki Style Template on desktop with light mode" width="49%" />
+  <img src="images/DesktopNight.png" alt="Anki Style Template on desktop with night mode" width="49%" />
+</div>
+
+On Mobile :
+<div style="display: flex; justify-content: space-evenly; margin-bottom: 20px;">
+  <img src="images/MobileLight.png" alt="Anki Style Template on mobile with light mode" width="20%" />
+  <img src="images/MobileNight.png" alt="Anki Style Template on mobile with night mode" width="20%" />
+</div>
+
+
+
 ## English
 
 ### Features
-- **Dark and Light Mode**: Automatically adapts to your system settings or can be manually toggled.
-- **Flashcard Style**: Designed to look like traditional flashcards with a clean and modern design.
-- **Animations**: Smooth animations for flipping cards and other interactions.
+- **Dark and Light Mode**: Automatically adapts to your Anki settings.
+- **Flashcard Style**: Designed to look like physical flashcards, modern and simple design.
+- **Animations**: Smooth animations for flipping cards on mobile and sliding cards on desktop.
 - **Responsive Design**: Works on both desktop and mobile devices.
 
-### How to Use
+### How to Use => Accessible for everyone
 1. **Download the Template**: Choose the version you want to use from the `English Version` or `Version Française` folder.
 2. **Open Anki**: Launch Anki and open the deck where you want to apply the template.
 3. **Edit Card Template**:
@@ -30,12 +46,12 @@ This project is licensed under the Creative Commons Attribution-NonCommercial 4.
 ## Français
 
 ### Fonctionnalités
-- **Mode Sombre et Clair**: S'adapte automatiquement aux paramètres de votre système ou peut être basculé manuellement.
-- **Style Carte de Révision**: Conçu pour ressembler à des cartes de révision traditionnelles avec un design propre et moderne.
-- **Animations**: Animations fluides pour retourner les cartes et autres interactions.
+- **Mode Sombre et Clair**: S'adapte automatiquement aux paramètres d'Anki.
+- **Style Carte de Révision**: Conçu pour ressembler à des cartes de révision physiques, avec un design moderne et simple.
+- **Animations**: Animations fluides pour retourner les cartes sur mobile et faire glisser les cartes sur desktop.
 - **Design Réactif**: Fonctionne sur les appareils de bureau et mobiles.
 
-### Comment Utiliser
+### Comment Utiliser => Accessible à tous
 1. **Téléchargez le Template**: Choisissez la version que vous souhaitez utiliser dans le dossier `English Version` ou `Version Française`.
 2. **Ouvrez Anki**: Lancez Anki et ouvrez le deck où vous souhaitez appliquer le template.
 3. **Modifiez le Template de Carte**:
