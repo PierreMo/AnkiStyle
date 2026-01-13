@@ -26,18 +26,22 @@ Tested on/Testé sur : `Anki Desktop`, `AnkiDroid`, `AnkiWeb`, `Anki IOS`
 - **Responsive Design**: Works on both desktop and mobile devices.
 
 ### How to Use ⇒ Accessible for everyone
-1. **Download the Template**: Choose the version you want to use from the `English Version` or `Version Française` folder.
-2. **Open Anki**: Launch Anki and open the deck where you want to apply the template.
+1. **Download the Template**: Choose the version you want to use from the `English Version` or `Version Française` folder of this repository.
+2. **Open Anki** : Do it on Anki Desktop, it will be much easier.
 3. **Edit Card Template**:
-   - Go to the "Browse" section.
-   - Select the card you want to edit.
+   - Go to the "Browse" section, on top of the screen.
+   - Select the card you want to edit, we will apply the style change to all cards of the same type.
    - Click on "Cards..." to open the card template editor.
 4. **Apply the Template**:
-   - Copy the content from the appropriate file (`basicCard.txt`, `generalitiesCard.txt`, or `clozeCard.txt`).
-   - Paste the content into the "Front Template", "Back Template", and "Styling" sections in Anki.
-5. **Save and Enjoy**: Save your changes and start using your newly styled flashcards!
+   - Copy the content from the appropriate file depending on the card you selected (`basicCard.txt`, `generalitiesCard.txt`, or `clozeCard.txt`).
+   - Paste the content into the "Front Template", "Back Template", and "Styling" sections in Anki as said in the text file.
+   - Click on "Save" to apply the changes.
+5. **Potential field problem**: If you have a field error, (probably with the Chapter field):
+   - Close the Card editor and open the fields editor (Click on "Fields...").
+   - Add the missing field or change the name of the problematic field.
+   - Close the fields editor, open the cards editor and try again from step 4.
+6. **Enjoy**: Start using your newly styled flashcards! You can do this operation for each type of card (basic, generalities, cloze) in your deck.
 
-**Note**: This template will modify the style for all cards of the same type in your deck.
 
 ### License
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. You are free to share and adapt the material for non-commercial purposes, as long as you give appropriate credit. For more details, see the [LICENSE](LICENSE) file.
@@ -53,18 +57,21 @@ This project is licensed under the Creative Commons Attribution-NonCommercial 4.
 - **Design Réactif**: Fonctionne sur les appareils de bureau et mobiles.
 
 ### Comment Utiliser → Accessible à tous
-1. **Téléchargez le Template**: Choisissez la version que vous souhaitez utiliser dans le dossier `English Version` ou `Version Française`.
-2. **Ouvrez Anki**: Lancez Anki et ouvrez le deck où vous souhaitez appliquer le template.
-3. **Modifiez le Template de Carte**:
-   - Allez dans la section "Parcourir".
-   - Sélectionnez la carte que vous souhaitez modifier.
+1. **Téléchargez le Template** : Choisissez la version que vous souhaitez utiliser dans le dossier `English Version` ou `Version Française` de ce dépôt GitHub.
+2. **Ouvrez Anki** : Allez sur Anki Desktop, ce sera beaucoup plus facile.
+3. **Modifiez le Template de Carte** :
+   - Allez dans la section "Parcourir", en haut de l'écran.
+   - Sélectionnez la carte que vous souhaitez modifier, nous appliquerons le changement de style à toutes les cartes du même type.
    - Cliquez sur "Cartes..." pour ouvrir l'éditeur de template de carte.
-4. **Appliquez le Template**:
-   - Copiez le contenu du fichier approprié (`basicCard.txt`, `generalitiesCard.txt`, ou `clozeCard.txt`).
-   - Collez le contenu dans les sections "Modèle du recto", "Modèle du verso", et "Styles" dans Anki.
-5. **Enregistrez et Profitez**: Enregistrez vos modifications et commencez à utiliser vos cartes de révision nouvellement stylisées !
-
-**Note**: Ce template modifiera le style pour toutes les cartes du même type dans votre deck.
+4. **Appliquez le Template** :
+   - Copiez le contenu du fichier approprié en fonction de la carte sélectionnée (`basicCard.txt`, `generalitiesCard.txt`, ou `clozeCard.txt`).
+   - Collez le contenu dans les sections "Modèle du recto", "Modèle du verso", et "Styles" dans Anki comme indiqué dans le fichier texte.
+   - Cliquez sur "Enregistrer" pour appliquer les modifications.
+5. **Problème potentiel de champ** : Si vous avez une erreur de champ, (probablement avec le champ Chapitre) :
+   - Fermez l'éditeur de carte et ouvrez l'éditeur de champs (Cliquez sur "Champs...").
+   - Ajoutez le champ manquant ou changez le nom du champ problématique.
+   - Fermez l'éditeur de champs, rouvrez l'éditeur de cartes et réessayez à partir de l'étape 4.
+6. **Profitez** : Commencez à utiliser vos cartes de révision stylisées ! Vous pouvez effectuer cette opération pour chaque type de carte (basique, généralités, texte à trous) dans votre deck.
 
 ### Licence
 Ce projet est sous licence Creative Commons Attribution-NonCommercial 4.0 International. Vous êtes libre de partager et d'adapter le matériel à des fins non commerciales, tant que vous donnez le crédit approprié. Pour plus de détails, voir le fichier [LICENSE](LICENSE).

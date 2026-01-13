@@ -2,7 +2,11 @@
 TO COPY IN "Front Template" FOR "Generalities (Two Ways)" CARDS (BELOW IS THE BACK TEMPLATE AND STYLING):
 */
 
-<header><p>{{Chapter}}</header><input id=flip-control type=checkbox><div class=inFront id=theContent><div id=flippingCard><div class=face id=front><div class=faceContent>{{Front}}</div></div><hr id=answer><div class=face id=back><div class=faceContent>{{Back}}</div></div></div><div id=bckgCards><div class=face id=bckgFace1></div><div class=face id=bckgFace2><p>Here should be a question about your course with words in <b>bold</b>, words in <i>italic</i>, <u>underlined</u> words, and <a>links</a></div></div></div>
+<header><p>
+{{Chapter}}
+</header><input id=flip-control type=checkbox><div class=inFront id=theContent><div id=flippingCard><div class=face id=front><div class=faceContent>
+{{Front}}
+</div></div><hr id=answer><div class=face id=back><div class=faceContent>{{Back}}</div></div></div><div id=bckgCards><div class=face id=bckgFace1></div><div class=face id=bckgFace2><p>Here should be a question about your course with words in <b>bold</b>, words in <i>italic</i>, <u>underlined</u> words, and <a>links</a></div></div></div>
 
 
 
@@ -10,7 +14,11 @@ TO COPY IN "Front Template" FOR "Generalities (Two Ways)" CARDS (BELOW IS THE BA
 TO COPY IN "Back Template" FOR "Generalities (Two Ways)" CARDS:
 */
 
-<header><p>{{Chapter}}</header><input id=flip-control type=checkbox><div class=inBack id=theContent><div id=flippingCard><div class=face id=front><div class=faceContent>{{Front}}</div></div><hr id=answer><div class=face id=back><div class=faceContent>{{Back}}</div></div></div><div id=bckgCards><div class=face id=bckgFace1></div><div class=face id=bckgFace2><p>Here should be a question about your course with words in <b>bold</b>, words in <i>italic</i>, <u>underlined</u> words, and <a>links</a></div></div></div>
+<header><p>
+{{Chapter}}
+</header><input id=flip-control type=checkbox><div class=inBack id=theContent><div id=flippingCard><div class=face id=front><div class=faceContent>
+{{Front}}
+</div></div><hr id=answer><div class=face id=back><div class=faceContent>{{Back}}</div></div></div><div id=bckgCards><div class=face id=bckgFace1></div><div class=face id=bckgFace2><p>Here should be a question about your course with words in <b>bold</b>, words in <i>italic</i>, <u>underlined</u> words, and <a>links</a></div></div></div>
 
 
 

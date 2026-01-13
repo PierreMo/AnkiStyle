@@ -2,7 +2,11 @@
 À COPIER DANS "Modèle du recto" pour les cartes "Texte à trous" (en dessous se trouve la partie verso) :
 */
 
-<header><p>{{Chapitre}}</header><div class=inRecto id=theContent><div id=flippingCard><div class=face id=recto><div class=faceContent><p>{{cloze:Texte}}</div></div><hr id=answer><div class=face id=verso><div class=faceContent><p>Ne devrait pas s'afficher</div></div></div><div id=bckgCards><div class=face id=bckgFace1></div><div class=face id=bckgFace2><p>Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a></div></div></div>
+<header><p>
+{{Chapitre}}
+</header><div class=inRecto id=theContent><div id=flippingCard><div class=face id=recto><div class=faceContent><p>
+{{cloze:Texte}}
+</div></div><hr id=answer><div class=face id=verso><div class=faceContent><p>Ne devrait pas s'afficher</div></div></div><div id=bckgCards><div class=face id=bckgFace1></div><div class=face id=bckgFace2><p>Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a></div></div></div>
 
 
 
@@ -10,7 +14,11 @@
 À COPIER DANS "Modèle du verso" pour les cartes "Texte à trous" (en dessous se trouve la partie verso) :
 */
 
-<header><p>{{Chapitre}}</header><div class=inVerso id=theContent><div id=flippingCard><div class=face id=recto><div class=faceContent><p>{{cloze:Texte}}</div></div><hr id=answer><div class=face id=verso><div class=faceContent><p>Ne devrait pas s'afficher</div></div></div><div id=bckgCards><div class=face id=bckgFace1></div><div class=face id=bckgFace2><p>Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a></div></div></div>
+<header><p>
+{{Chapitre}}
+</header><div class=inVerso id=theContent><div id=flippingCard><div class=face id=recto><div class=faceContent><p>
+{{cloze:Texte}}
+</div></div><hr id=answer><div class=face id=verso><div class=faceContent><p>Ne devrait pas s'afficher</div></div></div><div id=bckgCards><div class=face id=bckgFace1></div><div class=face id=bckgFace2><p>Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a></div></div></div>
 
 
 

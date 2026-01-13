@@ -2,7 +2,13 @@
 À METTRE DANS "Modèle du recto" pour les cartes "Généralités (deux sens)" (en dessous se trouve la partie verso et le style) :
 */
 
-<header><p>{{Chapitre}}</header><input id=flip-control type=checkbox><div class=inRecto id=theContent><div id=flippingCard><div class=face id=recto><div class=faceContent>{{Recto}}</div></div><hr id=answer><div class=face id=verso><div class=faceContent>{{Verso}}</div></div></div><div id=bckgCards><div class=face id=bckgFace1></div><div class=face id=bckgFace2><p>Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a></div></div></div>
+<header><p>
+{{Chapitre}}
+</header><input id=flip-control type=checkbox><div class=inRecto id=theContent><div id=flippingCard><div class=face id=recto><div class=faceContent>
+{{Recto}}
+</div></div><hr id=answer><div class=face id=verso><div class=faceContent>
+{{Verso}}
+</div></div></div><div id=bckgCards><div class=face id=bckgFace1></div><div class=face id=bckgFace2><p>Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a></div></div></div>
 
 
 
@@ -10,7 +16,13 @@
 À METTRE DANS "Modèle du verso" pour les cartes "Généralités (deux sens)" :
 */
 
-<header><p>{{Chapitre}}</header><input id=flip-control type=checkbox><div class=inVerso id=theContent><div id=flippingCard><div class=face id=recto><div class=faceContent>{{Recto}}</div></div><hr id=answer><div class=face id=verso><div class=faceContent>{{Verso}}</div></div></div><div id=bckgCards><div class=face id=bckgFace1></div><div class=face id=bckgFace2><p>Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a></div></div></div>
+<header><p>
+{{Chapitre}}
+</header><input id=flip-control type=checkbox><div class=inVerso id=theContent><div id=flippingCard><div class=face id=recto><div class=faceContent>
+{{Recto}}
+</div></div><hr id=answer><div class=face id=verso><div class=faceContent>
+{{Verso}}
+</div></div></div><div id=bckgCards><div class=face id=bckgFace1></div><div class=face id=bckgFace2><p>Ici il doit y avoir une question sur ton cours avec des mots en <b>gras</b> des mots en <i>italique</i> et des mots <u>soulignés</u> et des <a>liens</a></div></div></div>
 
 
 
