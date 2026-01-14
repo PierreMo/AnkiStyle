@@ -1,3 +1,5 @@
+/* Veuillez vous référer au fichier README.md pour les instructions. */
+
 /*
 À METTRE DANS "Modèle du recto" pour les cartes "Généralités (deux sens)" (en dessous se trouve la partie verso et le style) :
 */

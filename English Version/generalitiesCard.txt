@@ -1,3 +1,5 @@
+/* Please refer to the README.md file for instructions. */
+
 /*
 TO COPY IN "Front Template" FOR "Generalities (Two Ways)" CARDS (BELOW IS THE BACK TEMPLATE AND STYLING):
 */
